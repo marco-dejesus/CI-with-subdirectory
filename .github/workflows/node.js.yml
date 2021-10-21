@@ -6,8 +6,18 @@ name: Node.js CI
 on:
   push:
     branches: [ main ]
+    paths:  
+      - '!subfolder1/**'
+      - 'subfolder1/subfolder2/subfolder3/project/**'
   pull_request:
     branches: [ main ]
+    paths:  
+      - '!subfolder1/**'
+      - 'subfolder1/subfolder2/subfolder3/project/**'
+
+defaults:
+  run:
+    working-directory:  ./subfolder1/subfolder2/subfolder3/project
 
 jobs:
   build:
