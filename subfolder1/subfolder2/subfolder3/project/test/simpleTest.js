@@ -1,6 +1,6 @@
 var assert = require('assert');
 
-// commen
+// comments 
 
 describe('Array', function() {
   describe('#indexOf()', function() {
