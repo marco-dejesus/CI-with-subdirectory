@@ -10,7 +10,7 @@ on:
 #      - '!subfolder1/**'
 #      - 'subfolder1/subfolder2/subfolder3/project/**'
   pull_request:
-#    branches: [ main ]
+    branches: [ main ]
     paths:  
       - '!subfolder1/**'
       - 'subfolder1/subfolder2/subfolder3/project/**'
