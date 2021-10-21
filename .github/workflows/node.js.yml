@@ -4,11 +4,11 @@
 name: Node.js CI
 
 on:
-  push:
-    branches: [ main ]
-    paths:  
-      - '!subfolder1/**'
-      - 'subfolder1/subfolder2/subfolder3/project/**'
+#  push:
+#    branches: [ main ]
+#    paths:  
+#      - '!subfolder1/**'
+#      - 'subfolder1/subfolder2/subfolder3/project/**'
   pull_request:
     branches: [ main ]
     paths:  
@@ -36,7 +36,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        cache-dependency-path: './subfolder1/subfolder2/subfolder3/project/package-lock.json'
+        cache-dependency-path: '~/package-lock.json'
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
