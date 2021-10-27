@@ -53,7 +53,7 @@ jobs:
         cache-dependency-path: '**/package-lock.json'
           
     - name: Install dependencies
-      # if: steps.projectCacheStep.outputs.cache-hit != 'true'
+      if: steps.projectCacheStep.outputs.cache-hit != 'true'
       # run: npm install
       run: npm ci
       
