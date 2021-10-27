@@ -1,6 +1,6 @@
 var assert = require('assert');
 
-// comments 999
+// comments 999 intentional
 
 describe('Array', function() {
   describe('#indexOf()', function() {
